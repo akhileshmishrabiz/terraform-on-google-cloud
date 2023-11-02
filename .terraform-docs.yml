@@ -1,0 +1,20 @@
+formatter: toml # this is required
+
+version: ""
+
+content: ""
+
+output:
+  file: ""
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->    
+
+
+settings:
+  indent: 2
+  lockfile: true
+  read-comments: true
+  sensitive: true
