@@ -11,9 +11,14 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    permissions:
+        contents: 'read'
+        id-token: 'write'
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Render terraform docs inside the README.md and push changes back to PR branch
       uses: terraform-docs/gh-actions@v1.0.0
@@ -21,4 +26,4 @@ jobs:
         working-dir: .
         output-file: README.md
         output-method: replace
-        git-push: "true"
+        git-push: "true"  # Auto commit changes
