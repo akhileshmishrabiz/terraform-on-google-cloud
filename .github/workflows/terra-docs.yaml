@@ -27,4 +27,4 @@ jobs:
         output-file: README.md
         output-method: replace
         config-file: .terraform-docs.yml
-        git-push: "true"  # If true it will commit and push the changes
+        git-push: "false"  # If true it will commit and push the changes
