@@ -1,15 +1,10 @@
-formatter: toml # this is required
-
-version: ""
-
-header-from: main.tf
-footer-from: "variables.tf"
+formatter: json # this is required
 
 
 content: ""
 
 output:
-  file: README.md # output-file
+  file: USAGE.md # output-file
   mode: replace
   template: |-
     <!-- BEGIN_TF_DOCS -->
@@ -33,7 +28,3 @@ settings:
   hide-empty: true
   html: true
   indent: 4
-  lockfile: true
-  required: true
-  sensitive: true
-  type: true
